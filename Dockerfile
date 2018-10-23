@@ -8,4 +8,4 @@ WORKDIR /app
 
 COPY / .
 
-ENTRYPOINT ["dotnet", "dotnetcore-sample.dll"]
+ENTRYPOINT ["dotnet", "WebApp.dll"]
