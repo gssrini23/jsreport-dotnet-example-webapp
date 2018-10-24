@@ -30,7 +30,7 @@ spec:
 
       - name: aspdotnet 
 
-        image: gsrini23/angular-app:#{Build.BuildId}#
+        image: gsrini23/dotnetapp:#{Build.BuildId}#
 
         ports: 
 
@@ -46,7 +46,7 @@ apiVersion: v1
 
 metadata: 
 
-  name: angular-service 
+  name: aspdotnet-service
 
 spec: 
 
