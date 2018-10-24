@@ -1,11 +1,16 @@
-FROM microsoft/aspnetcore:2.0
-
-# Create app directory
-
+FROM microsoft/dotnet:sdk AS build-env
 WORKDIR /app
 
-# Copy files from the artifact staging folder on agent
+# Copy csproj and restore as distinct layers
+COPY *.csproj ./
+RUN dotnet restore
 
-COPY / .
+# Copy everything else and build
+COPY . ./
+RUN dotnet publish -c Release -o out
 
+# Build runtime image
+FROM microsoft/dotnet:aspnetcore-runtime
+WORKDIR /app
+COPY --from=build-env /app/out .
 ENTRYPOINT ["dotnet", "WebApp.dll"]
