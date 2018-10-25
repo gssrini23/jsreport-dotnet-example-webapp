@@ -22,13 +22,13 @@ spec:
 
       labels: 
 
-        app:  aspdotnetlabel 
+        app:  aspdotnet 
 
     spec: 
 
       containers: 
 
-      - name:  aspdotnetconatiner 
+      - name:  aspdotnet 
 
         image: gsrini23/dotnetapp:#{Build.BuildId}#
 
