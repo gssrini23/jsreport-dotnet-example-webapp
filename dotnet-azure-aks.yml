@@ -62,7 +62,7 @@ spec:
 
 
 
-        image: azkubereg.azurecr.io/dotnetapp:#{Build.BuildId}#
+        image: demoacr123.azurecr.io/dotnetapp:#{Build.BuildId}#
 
 
 
