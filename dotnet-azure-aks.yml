@@ -62,7 +62,7 @@ spec:
 
 
 
-        image: demoacr123.azurecr.io/naveen-dotnet:#{Build.BuildId}#
+        image: gsrini23/azurepoctask:#{Build.BuildId}#
 
 
 
